@@ -1,0 +1,92 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', sans-serif;
+}
+/* MENU BAR*/
+#menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background-color: white;
+    transition: .55s;
+
+}
+#menu span{
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#nome{
+    font-weight: 900;
+    padding-left: 15px;
+    font-size: 2em;
+}
+
+#sobre-nome{
+    opacity: .550;
+    font-weight: 100;
+    padding-left: 7px;
+    font-size: 2em;
+    transition: 1.1s;
+}
+
+#menu:hover{
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
+}
+#menu:hover #sobre-nome{
+    opacity: 1;
+    font-size: 2.1em;
+    transition: 1.1s ease-in-out;
+}
+
+#menu ul{
+    position: absolute;
+    right: 0;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#menu a{
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: right;
+    color: rgba(0, 0, 0, .6);
+    padding-right: 50px;
+    font-size: 1.4em;
+    position: relative;
+    top: 0;
+    right: 0;
+
+
+}
+#menu a:hover::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    width: 60%;
+    justify-content: center;
+    height: 3px;
+    background-color: rgba(92, 121, 209,1);
+    transition: 2s;
+    
+}
+
+/* DIV TOP ANIMADA*/
+
+
