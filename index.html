@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e13d856e8c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Informeai by - Wellington Gadelha</title>
 </head>
@@ -12,9 +13,18 @@
         <span id="nome">Wellington</span><span id="sobre-nome">Gadelha</span>
         
         <ul>
-            <li><a href="#sob">Sobre</a></li>
-            <li><a href="#ser">Serviços</a></li>
-            <li><a href="#con">Contato</a></li>
+            <li id="li-sobre"><a href="#sob">Sobre</a></li>
+            <li id="li-servicos"><a href="#ser">Serviços</a></li>
+            <li id="li-contato"><a href="#con">Contato</a></li>
+            <li id="bars"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+        
+    </div>
+    <div id="menu-mobile">
+        <ul>
+            <li id="li-mob-sobre"><a href="#sob">Sobre</a></li>
+            <li id="li-mob-servicos"><a href="#ser">Serviços</a></li>
+            <li id="li-mob-contato"><a href="#con">Contato</a></li>
         </ul>
     </div>
     <div id="top-animated">
@@ -41,15 +51,21 @@
             <img src="./img/sobre.jpg" alt="">
         </div>
         <div id="text-sobre">
-            Lorem Ipsum is simply dummy text of the 
-            printing and typesetting industry. Lorem Ipsum has been the 
-            industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the 
-            leap into electronic typesetting, remaining essentially unchanged. It 
-            was popularised in the 1960s with the release of Letraset sheets containing 
-            Lorem Ipsum passages, and more recently with desktop publishing software 
-            like Aldus PageMaker including versions of Lorem Ipsum.
+            Formado em Ciências Contabeis pela Universidade Paulista, mas apaixonado por programação e 
+            soluções em tecnologia, busco resolver problemas de forma objetiva,
+            simples ou complexa, mas com foco na qualidade. Entender o que o usuário
+            busca e procurar alternativas no mercado para suprir suas necessidades, e  pensando
+            na satisfação do cliente/usuário é o que me inspira todo dia.
+            No uso da linguagem Python e com conhecimento em análise de dados, modelagem e aprendizado de máquina, busco fornecer
+            conhecimento e compreensão da importancia dos dados no cenário atual.
+            Criar soluções que adicionam valor ao cliente é fundamental, portanto , saber automatizar tarefas fornece produtividade
+            a qualquer negócio atualmente.
+            Me dedico a aprender tecnologias e linguagens novas, pois entendo que o mercado evolui, assim como o ser humano.
+            Curto games, músicas pop e rock, e no tempo livre curto uma conversa boa. Por que?
+            Em um mundo cada vez mais conectado, não posso esquecer que o ser humano e quem está ao nosso lado, é a causa de sermos
+            hoje melhores que ontem.
+            Quer me conhecer melhor?
+            Seja bem vindo...
         </div>
         
     </div>
@@ -76,14 +92,16 @@
         Contato
     </div>
     <div id="contato">
-        <div>Github</div>
-        <div>Instagram</div>
-        <div>Twiter</div>
-        <div>Email</div>
+        <div><a id="cont-inst" href="https://www.instagram.com/gadelha_wellington/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+        <div><a id="cont-twitt" href="https://twitter.com/WellingtonGade4" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></div>
+        <div><a id="cont-face" href="https://www.facebook.com/wellington.gadelha.37" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a></div>
+        <div><a id="cont-linke" href="https://www.linkedin.com/in/wellington-gadelha-161677189/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></div>
     </div>
 
     <footer>
         Copyright &#169; 2020. Wellington Gadelha
     </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

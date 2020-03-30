@@ -22,6 +22,37 @@
     z-index: 500;
 
 }
+#bars{
+    display: none;
+}
+#menu-mobile{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#menu-mobile ul{
+    list-style: none;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#menu-mobile a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, .5);
+}
+#menu-mobile a:hover::after{
+    height: 0;
+}
 #menu span{
     color: rgba(0, 0, 0, 1);
     cursor: pointer;
@@ -71,8 +102,9 @@
     position: relative;
     top: 0;
     right: 0;
-
-
+}
+#menu #bars i{
+    font-size: 1em;
 }
 #menu a:hover::after{
     content: '';
@@ -100,7 +132,6 @@
     width: 100%;
     height: 800px;
     clear: both;
-    /* border: 1px red solid; */
 }
 #top-animated::after{
     clear: both;
@@ -127,7 +158,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: rgba(235, 213, 178, 0.6);
+    background-color: rgba(228, 180, 104, 0.6);
     z-index: 2;
 }
 #lua{
@@ -140,7 +171,7 @@
 }
 
 #sobre{
-    /* margin-top: 150px; */
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +182,6 @@
 }
 #title-sobre{
     margin-top: 160px;
-    margin-left: 50px;
     padding: 20px;
     display: flex;
     font-size: 3em;
@@ -163,7 +193,7 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    font-size: 1.5em;
+    font-size: 1.3em;
     position: relative;
     text-align: left;
     padding: 20px 20px;
@@ -199,7 +229,7 @@
     justify-content: space-around;
     align-items: flex-start;
     text-align: center;
-    height: 800px;
+    height: auto;
     flex-wrap: wrap;
 }
 #servicos img{
@@ -220,22 +250,38 @@
 }
 #title-contato{
     font-size: 3em;
-    margin-top: 50px;
-    margin-left: 50px;
+    padding: 20px;
     display: flex;
     color: rgba(0, 0, 0, 1);
 }
 #contato{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: start;
     align-items: flex-start;
-    height: 800px;
+    height: auto;
 }
-#contato div{
+#contato a{
+    text-decoration: none;
     font-size: 1.5em;
     color: rgba(0, 0, 0, 1);
     padding: 20px;
+}
+#contato a#cont-inst:hover{
+    color: purple;
+}
+#contato a#cont-twitt:hover{
+    color: #00acee;
+}
+#contato a#cont-face:hover{
+    color: #3b5998;
+}
+#contato a#cont-linke:hover{
+    color: #0e76a8;
+}
+#contato i{
+    margin-right: 5px;
+    font-size: 1.1em;
 }
 
 /* FOOTER */
@@ -244,3 +290,105 @@ footer{
     padding: 20px;
     color: rgba(0, 0, 0, 1);
 }
+
+/* MEDIAS */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    #top-animated{
+        height: 500px;
+    }
+    #menu span{
+        font-size: 1.3em;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    #top-animated{
+        height: 600px;
+    }
+    #contato{
+        flex-direction: column;
+    }
+    #sol{
+        width: 50px;
+        height: 50px;
+    }
+    #imagem img{
+        height: 30%;
+    }
+    footer{
+        font-size: 1em;
+    }
+    
+    #bars{
+        display: block;
+    }
+    #li-sobre{
+        display: none;
+    }
+    #li-servicos{
+        display: none;
+    }
+    #li-contato{
+        display: none;
+    }
+    #menu span{
+        font-size: 1.5em;
+    }
+  }
