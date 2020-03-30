@@ -19,6 +19,7 @@
     position: fixed;
     background-color: white;
     transition: .55s;
+    z-index: 500;
 
 }
 #menu span{
@@ -89,4 +90,157 @@
 
 /* DIV TOP ANIMADA*/
 
+#top-animated{
+    top: 55px;
+    left: 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 800px;
+    clear: both;
+    /* border: 1px red solid; */
+}
+#top-animated::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+#imagem img{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 60px;
+    left: 0;
+    width: 90%;
+    height: 100%;
 
+}
+
+#sol{
+    position: absolute;
+    display: flex;
+    top: 35px;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(235, 213, 178, 0.6);
+    z-index: 2;
+}
+#lua{
+
+}
+/* SOBRE */
+
+#sob{
+    height: 50px;
+}
+
+#sobre{
+    /* margin-top: 150px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    
+}
+#title-sobre{
+    margin-top: 160px;
+    margin-left: 50px;
+    padding: 20px;
+    display: flex;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 1);
+}
+#text-sobre{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    font-size: 1.5em;
+    position: relative;
+    text-align: left;
+    padding: 20px 20px;
+
+
+}
+#img-sobre img{
+    display: flex;
+    padding: 25px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+/* SERVICOS */
+#ser{
+    height: 50px;
+}
+
+#title-servicos{
+    /* margin-top: 50px;
+    margin-left: 50px; */
+    padding: 20px;
+    display: flex;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 1);
+}
+#servicos{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    height: 800px;
+    flex-wrap: wrap;
+}
+#servicos img{
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+
+}
+#servicos div{
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 1);
+}
+/* CONTATO */
+
+#con{
+    height: 50px;
+}
+#title-contato{
+    font-size: 3em;
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    color: rgba(0, 0, 0, 1);
+}
+#contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    height: 800px;
+}
+#contato div{
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 1);
+    padding: 20px;
+}
+
+/* FOOTER */
+footer{
+    font-size: 1.4em;
+    padding: 20px;
+    color: rgba(0, 0, 0, 1);
+}
