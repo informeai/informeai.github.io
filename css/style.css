@@ -244,6 +244,20 @@
     font-size: 1.3em;
     color: rgba(0, 0, 0, 1);
 }
+#desc-data-science{
+    padding: 20px;
+    font-size: 1em;
+}
+#desc-automation{
+    padding: 20px;
+}
+#desc-desenvolvimento{
+    padding: 20px;
+}
+#servicos .title-servicos{
+    font-size: 2em;
+    padding-bottom: 20px;
+}
 /* CONTATO */
 
 #con{
