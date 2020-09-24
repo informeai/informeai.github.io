@@ -87,6 +87,9 @@ section#nav-bar article#soft-des #soft::after{
     background: linear-gradient(45deg, #0761d1, #0070ff,#3291ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    background-clip: text;
+
     width: 100%;
     height: 100%;
     animation: animate 8s infinite;
@@ -98,6 +101,8 @@ section#nav-bar article#soft-des #des::after{
     background: linear-gradient(45deg, #eb367f, #ff0080,#f81ce5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    background-clip: text;
     animation: animate 8s  3s infinite;
 }
 
