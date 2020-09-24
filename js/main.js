@@ -3,6 +3,8 @@ window.addEventListener('load', function(e){
     let cardDesign = document.querySelector('#card-design')
     let cardSoftware = document.querySelector('#card-software')
 
+
+
     cardAutomation.addEventListener('click', function(event){
 
         cardAutomation.style.backgroundColor = '#0070ff'
@@ -136,8 +138,8 @@ window.addEventListener('load', function(e){
         })
         
     })
-
-    document.addEventListener('scroll',function(e){
+    // Evento de Scroll
+    document.addEventListener('scroll', function(e){
         cardAutomation.style.backgroundColor = '#ffffff'
         cardAutomation.childNodes.forEach(function(item){
             if(item.classList == 'card-giga'){
@@ -177,5 +179,6 @@ window.addEventListener('load', function(e){
             }
         })
     })
-});
 
+    
+});
