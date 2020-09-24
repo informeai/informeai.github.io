@@ -84,7 +84,8 @@ section#nav-bar article#soft-des #soft{
 section#nav-bar article#soft-des #soft::after{
     content: 'Software';
     position: absolute;
-    
+    top: 0;
+    left: 0;
     background: linear-gradient(45deg, #0761d1, #0070ff,#3291ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -98,6 +99,8 @@ section#nav-bar article#soft-des #soft::after{
 section#nav-bar article#soft-des #des::after{
     content: 'Design';
     position: absolute;
+    top: 0;
+    left: 0;
     background: linear-gradient(45deg, #eb367f, #ff0080,#f81ce5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
