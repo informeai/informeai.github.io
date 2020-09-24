@@ -1,309 +1,247 @@
 /* Fontes */
-@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Poppins&display=swap');
 *{
     font-size: 16px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+body{
+    margin: 30px;
+    background-color: #fafafa;
+    user-select: none;
 }
 /* MENU BAR*/
-#menu{
+section#nav-bar nav{
+    /* border: 1px solid red; */
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 30px;
     flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    background-color: white;
-    transition: .55s;
-    z-index: 500;
-
 }
-#bars{
-    display: none;
-}
-#menu-mobile{
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    top: 0;
-    right: 0;
-    background-color: white;
-    width: 70%;
-    height: 100%;
-    z-index: 1000;
-}
-
-#menu-mobile ul{
-    list-style: none;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-#menu-mobile a{
+section#nav-bar nav a{
     text-decoration: none;
-    font-size: 1.5em;
-    color: rgba(0, 0, 0, .5);
+    color: #666666;
+    font-weight: 400;
+    padding-left: 20px;
 }
-#menu-mobile a:hover::after{
-    height: 0;
+section#nav-bar nav a#nav-contato{
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
-#menu span{
-    color: rgba(0, 0, 0, 1);
-    cursor: pointer;
-    user-select: none;
-
-}
-
-#nome{
-    font-weight: 900;
-    padding-left: 15px;
-    font-size: 2em;
-}
-
-#sobre-nome{
-    opacity: .550;
-    font-weight: 100;
-    padding-left: 7px;
-    font-size: 2em;
-    transition: 1.1s;
-}
-
-#menu:hover{
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
-}
-#menu:hover #sobre-nome{
-    opacity: 1;
-    font-size: 2.1em;
-    transition: 1.1s ease-in-out;
-}
-
-#menu ul{
-    position: absolute;
-    right: 0;
-    list-style: none;
+section#nav-bar div{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-}
-#menu a{
-    display: flex;
-    cursor: pointer;
-    text-decoration: none;
-    justify-content: right;
-    color: rgba(0, 0, 0, .6);
-    padding-right: 50px;
-    font-size: 1.4em;
     position: relative;
-    top: 0;
-    right: 0;
+    cursor: pointer;
 }
-#menu #bars i{
-    font-size: 1em;
-}
-#menu a:hover::after{
-    content: '';
+div#icon span{
+    color: #fafafa;
+    font-size: 1.1rem;
+    font-family: monospace;
     position: absolute;
     bottom: 0;
-    left: 0;
-    align-items: center;
-    width: 60%;
-    justify-content: center;
-    height: 3px;
-    background-color: rgba(92, 121, 209,1);
-    transition: 2s;
-    
+    left: 1;
+    transform: translateY(3px);
 }
-
-/* DIV TOP ANIMADA*/
-
-#top-animated{
-    top: 55px;
-    left: 0;
+div#icon svg{
+    width: 30px;
+    height: 30px;
+}
+section#nav-bar article#soft-des{
+    /* border: 1px solid red; */
+    margin-top: 10rem;
     display: flex;
-    position: relative;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 800px;
-    clear: both;
 }
-#top-animated::after{
-    clear: both;
-    content: '';
-    display: table;
-}
-#imagem img{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 60px;
-    left: 0;
-    width: 90%;
-    height: 100%;
-
+section#nav-bar article div{
+    font-size: 128px;
+    font-weight: 800;
+    font-family: "Inter", sans-serif;
 }
 
-#sol{
-    position: absolute;
-    display: flex;
-    top: 35px;
-    left: 10%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: rgba(228, 180, 104, 0.6);
-    z-index: 2;
-}
-#lua{
 
-}
 /* SOBRE */
 
-#sob{
-    height: 50px;
-}
-
-#sobre{
-    
+section#sobre{
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    position: relative;
-    flex-wrap: wrap;
-    
-}
-#title-sobre{
-    margin-top: 160px;
-    padding: 20px;
-    display: flex;
-    font-size: 3em;
-    color: rgba(0, 0, 0, 1);
-}
-#text-sobre{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 50%;
-    height: auto;
-    font-size: 1.3em;
-    position: relative;
-    text-align: left;
-    padding: 20px 20px;
-
-
-}
-
-#img-sobre img{
-    display: flex;
-    padding: 25px;
-    border-radius: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    text-align: center;
+}
+section#sobre .sub-title{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: center;
+}
+section#sobre .title{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+section#sobre article{
+    position: relative;
+    /* border: 1px solid red; */
+}
+section#sobre article .text-sobre{
+    margin-top: 5rem;
+    text-align: justify;
+    max-width: 500px;
+    font-size: 2rem;
 }
 
 /* SERVICOS */
-#ser{
-    height: 50px;
-}
-
-#title-servicos{
-    /* margin-top: 50px;
-    margin-left: 50px; */
-    padding: 20px;
+section#servicos{
+    margin-top: 10rem;
     display: flex;
-    font-size: 3em;
-    color: rgba(0, 0, 0, 1);
-}
-#servicos{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     text-align: center;
-    height: auto;
-    flex-wrap: wrap;
 }
-#servicos img{
+section#servicos .sub-title{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: center;
+}
+section#servicos .title{
+    font-size: 3rem;
+    font-weight: 600;
+}
+section#servicos article#cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10rem;
+    position: relative;
+    cursor: pointer;
+    
+}
+section#servicos article#cards div#card-design,
+section#servicos article#cards div#card-software,
+section#servicos article#cards div#card-automation{
     width: 300px;
-    height: 200px;
-    border-radius: 5px;
+    height: 400px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid #0070ff;
+}
+
+section#servicos article#cards div.card-title{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+}
+section#servicos article#cards div.card-text{
+    text-align: justify;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 20px;
+    color: #666666;
+}
+section#servicos article#cards div.card-giga{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+section#servicos article#cards div.card-giga img{
+    width: 100px;
+    height: 100px;
+    background-color: #eaeaea;
+    margin: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 1s;
+
 
 }
-#servicos div{
-    margin-top: 20px;
-    font-size: 1.3em;
-    color: rgba(0, 0, 0, 1);
-}
-#desc-data-science{
-    padding: 20px;
-    font-size: 1em;
-}
-#desc-automation{
-    padding: 20px;
-}
-#desc-desenvolvimento{
-    padding: 20px;
-}
-#servicos .title-servicos{
-    font-size: 2em;
-    padding-bottom: 20px;
+section#servicos article#cards div.card-giga img:hover{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
 }
 /* CONTATO */
+section#contato{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
 
-#con{
-    height: 50px;
+section#contato article .sub-title{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: center;
+    text-align: center;
 }
-#title-contato{
-    font-size: 3em;
-    padding: 20px;
+section#contato article .title{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+section#contato article .text-contato{
+    margin-top: 3rem;
+    max-width: 500px;
+    font-size: 2rem;
+    text-align: justify;
+}
+section#contato article#links{
+    margin-top: 5rem;
+    width: 100%;
     display: flex;
-    color: rgba(0, 0, 0, 1);
+    justify-content: space-around;
+    align-items: initial;
+    flex-direction: column;
+    text-align: start;
 }
-#contato{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: flex-start;
-    height: auto;
-}
-#contato a{
-    text-decoration: none;
-    font-size: 1.5em;
-    color: rgba(0, 0, 0, 1);
-    padding: 20px;
-}
-#contato a#cont-inst:hover{
-    color: purple;
-}
-#contato a#cont-twitt:hover{
-    color: #00acee;
-}
-#contato a#cont-face:hover{
-    color: #3b5998;
-}
-#contato a#cont-linke:hover{
-    color: #0e76a8;
-}
-#contato i{
+section#contato article#links a,i{
+    font-size: 1.2rem;
     margin-right: 5px;
-    font-size: 1.1em;
+    text-decoration: none;
 }
 
 /* FOOTER */
 footer{
-    font-size: 1.4em;
-    padding: 20px;
-    color: rgba(0, 0, 0, 1);
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    width: 100%;
+    text-align: center;
 }
 
 /* MEDIAS */
@@ -359,14 +297,9 @@ footer{
   
   @media (min-width: 481px) and (max-width: 767px) {
     
-    #top-animated{
-        height: 500px;
-    }
-    #menu span{
-        font-size: 1.3em;
-    }
-    #text-sobre{
-        width: 100%;
+    section#servicos article#cards{
+        flex-direction: column;
+        
     }
     
   }
@@ -377,39 +310,9 @@ footer{
   */
   
   @media (min-width: 320px) and (max-width: 480px) {
-    #top-animated{
-        height: 600px;
-    }
-    #contato{
-        flex-direction: column;
-    }
-    #sol{
-        width: 50px;
-        height: 50px;
-    }
-    #imagem img{
-        height: 30%;
-    }
-    footer{
-        font-size: 1em;
-    }
     
-    #bars{
-        display: block;
-    }
-    #li-sobre{
-        display: none;
-    }
-    #li-servicos{
-        display: none;
-    }
-    #li-contato{
-        display: none;
-    }
-    #menu span{
-        font-size: 1.5em;
-    }
-    #text-sobre{
-        width: 100%;
+    section#servicos article#cards{
+        flex-direction: column;
+        
     }
   }
