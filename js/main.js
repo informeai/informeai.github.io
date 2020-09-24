@@ -2,8 +2,32 @@ window.addEventListener('load', function(e){
     var cardAutomation = document.querySelector('#card-automation')
     let cardDesign = document.querySelector('#card-design')
     let cardSoftware = document.querySelector('#card-software')
+    let content = document.querySelector('#content')
+    let foot = document.querySelector('#foot')
+    let lightDark = document.querySelector('#light-dark')
 
-
+    lightDark.addEventListener('click', function(e){
+        
+        if(e.target.dataset.theme == 'light'){
+            
+            e.target.dataset.theme = 'dark'
+            e.target.classList = 'far fa-moon'
+            content.classList.remove('light')
+            content.classList.add('dark')
+            document.body.style.backgroundColor = '#111'
+            foot.style.backgroundColor = '#111'
+            foot.style.color = '#fafafa'
+        }else{
+            
+            e.target.dataset.theme = 'light'
+            e.target.classList = 'far fa-sun'
+            content.classList.remove('dark')
+            content.classList.add('light')
+            document.body.style.backgroundColor = '#fafafa'
+            foot.style.backgroundColor = '#fafafa'
+            foot.style.color = '#111'
+        }
+    })
 
     cardAutomation.addEventListener('click', function(event){
 

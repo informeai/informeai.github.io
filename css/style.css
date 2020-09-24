@@ -16,6 +16,35 @@ body{
     background-color: #fafafa;
     user-select: none;
 }
+#content.light{
+    background-color: #fafafa;
+    transition: all 1s;
+}
+#content.dark{
+    background-color: #111;
+    transition: all 1s;
+}
+#content.dark #soft,
+#content.dark #des,
+#content.dark div#theme i,
+#content.dark i.fab,
+#content.dark .sub-title,
+#content.dark .title,
+#content.dark .text-sobre,
+#content.dark .text-contato,
+#content.dark a#nav-contato,
+#content.dark a{
+    color: #fafafa;
+}
+#content.dark section div#foot{
+    color: #fafafa;
+}
+#content.dark #nav-bar svg path{
+    fill: #666666;
+}
+#content.dark #nav-bar span{
+    color: #fafafa;
+}
 /* MENU BAR*/
 section#nav-bar nav{
     /* border: 1px solid red; */
@@ -37,7 +66,7 @@ section#nav-bar nav a:hover{
     transition: 0.3s;
 }
 section#nav-bar nav a#nav-contato{
-    color: #000000;
+    color: #666666;
     font-weight: 600;
     font-size: 1.1rem;
 }
@@ -79,6 +108,17 @@ section#nav-bar article div{
 }
 section#nav-bar article#soft-des #soft{
     position: relative;
+}
+section#nav-bar #theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    color: #666666;
+}
+section#nav-bar #theme i{
+    color: #666666;
 }
 /* ESTILIZANDO */
 section#nav-bar article#soft-des #soft::after{
@@ -283,7 +323,7 @@ section#contato article#links a,i{
 }
 
 /* FOOTER */
-footer{
+div#foot{
     margin-top: 2rem;
     display: flex;
     justify-content: center;
