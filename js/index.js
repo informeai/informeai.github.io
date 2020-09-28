@@ -1,33 +1,19 @@
-window.addEventListener('load', function(e){
-    var cardAutomation = document.querySelector('#card-automation')
-    let cardDesign = document.querySelector('#card-design')
-    let cardSoftware = document.querySelector('#card-software')
-    let content = document.querySelector('#content')
-    let foot = document.querySelector('#foot')
-    let lightDark = document.querySelector('#light-dark')
+window.onload = function(){
+    cardAutomation = document.querySelector('#card-automation')
+    cardDesign = document.querySelector('#card-design')
+    cardSoftware = document.querySelector('#card-software')
+    content = document.querySelector('#content')
+    foot = document.querySelector('#foot')
+    lightDark = document.querySelector('#icon-theme')
 
-    lightDark.addEventListener('click', function(e){
-        
-        if(e.target.dataset.theme == 'light'){
-            
-            e.target.dataset.theme = 'dark'
-            e.target.classList = 'far fa-moon'
-            content.classList.remove('light')
-            content.classList.add('dark')
-            document.body.style.backgroundColor = '#111'
-            foot.style.backgroundColor = '#111'
-            foot.style.color = '#fafafa'
-        }else{
-            
-            e.target.dataset.theme = 'light'
-            e.target.classList = 'far fa-sun'
-            content.classList.remove('dark')
-            content.classList.add('light')
-            document.body.style.backgroundColor = '#fafafa'
-            foot.style.backgroundColor = '#fafafa'
-            foot.style.color = '#111'
-        }
-    })
+    eventsCards()
+    eventScrollCards()
+    eventScrollPage()
+    eventTheme()
+}
+
+let eventsCards = function(){
+    
 
     cardAutomation.addEventListener('click', function(event){
 
@@ -162,7 +148,9 @@ window.addEventListener('load', function(e){
         })
         
     })
-    // Evento de Scroll
+}
+
+let eventScrollCards = function(){
     document.addEventListener('scroll', function(e){
         cardAutomation.style.backgroundColor = '#ffffff'
         cardAutomation.childNodes.forEach(function(item){
@@ -203,6 +191,62 @@ window.addEventListener('load', function(e){
             }
         })
     })
+}
 
-    
-});
+let eventScrollPage = function(){
+    let sobre = document.querySelector('#sobre')
+    let servicos = document.querySelector('#servicos')
+    let contato = document.querySelector('#contato')
+    document.addEventListener('scroll', function(){
+        
+        console.log(window.pageYOffset)
+        if(window.pageYOffset >= 200){
+            sobre.classList.remove('disable')
+           
+        }else{
+            sobre.classList.add('disable')
+            
+        }
+
+        if(window.pageYOffset >= 800){
+            servicos.classList.remove('disable')
+           
+        }else{
+            servicos.classList.add('disable')
+            
+        }
+
+        if(window.pageYOffset >= 1300){
+            contato.classList.remove('disable')
+           
+        }else{
+            contato.classList.add('disable')
+            
+        }
+    })
+}
+
+let eventTheme = function(){
+    lightDark.addEventListener('click', function(e){
+        
+        if(e.target.dataset.theme == 'light'){
+            
+            e.target.dataset.theme = 'dark'
+            e.target.classList = 'far fa-moon'
+            content.classList.remove('light')
+            content.classList.add('dark')
+            document.body.style.backgroundColor = '#111'
+            foot.style.backgroundColor = '#111'
+            foot.style.color = '#fafafa'
+        }else{
+            
+            e.target.dataset.theme = 'light'
+            e.target.classList = 'far fa-sun'
+            content.classList.remove('dark')
+            content.classList.add('light')
+            document.body.style.backgroundColor = '#fafafa'
+            foot.style.backgroundColor = '#fafafa'
+            foot.style.color = '#111'
+        }
+    })
+}

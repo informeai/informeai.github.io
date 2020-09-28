@@ -168,6 +168,13 @@ section#sobre{
     flex-direction: column;
     width: 100%;
     text-align: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+section#sobre.disable{
+    display: flex;
+    transform: translateX(-100px);
+    opacity: 0;
 }
 section#sobre .sub-title{
     font-size: 1rem;
@@ -199,6 +206,13 @@ section#servicos{
     flex-direction: column;
     width: 100%;
     text-align: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+section#servicos.disable{
+    display: flex;
+    transform: translateX(100px);
+    opacity: 0;
 }
 section#servicos .sub-title{
     font-size: 1rem;
@@ -287,8 +301,14 @@ section#contato{
     flex-direction: column;
     width: 100%;
     text-align: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
 }
-
+section#contato.disable{
+    display: flex;
+    transform: translateX(-100px);
+    opacity: 0;
+}
 section#contato article .sub-title{
     font-size: 1rem;
     font-weight: 400;
@@ -324,7 +344,7 @@ section#contato article#links a,i{
 
 /* FOOTER */
 div#foot{
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -392,17 +412,27 @@ div#foot{
     }
     section#contato article .text-contato,
     section#sobre article .text-sobre{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
-    
+    section#servicos div.title,
+    section#contato div.title,
+    section#sobre div.title{
+        font-size: 2rem;
+    }
+    section#servicos div.sub-title,
+    section#contato div.sub-title,
+    section#sobre div.sub-title{
+        font-size: 0.8rem;
+    }
+
   }
   
   /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
+    ##Screen = B/w 280px to 479px
   */
   
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 280px) and (max-width: 480px) {
     #content{
         max-width: 480px;
     }
@@ -411,10 +441,20 @@ div#foot{
         
     }
     section#nav-bar article div{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     section#contato article .text-contato,
     section#sobre article .text-sobre{
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+    section#servicos div.title,
+    section#contato div.title,
+    section#sobre div.title{
+        font-size: 2rem;
+    }
+    section#servicos .sub-title,
+    section#contato .sub-title,
+    section#sobre .sub-title{
+        font-size: 0.8rem;
     }
   }
