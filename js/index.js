@@ -1,252 +1,44 @@
-window.onload = function(){
-    cardAutomation = document.querySelector('#card-automation')
-    cardDesign = document.querySelector('#card-design')
-    cardSoftware = document.querySelector('#card-software')
-    content = document.querySelector('#content')
-    foot = document.querySelector('#foot')
-    lightDark = document.querySelector('#icon-theme')
-
-    eventsCards()
-    eventScrollCards()
-    eventScrollPage()
-    eventTheme()
-}
-
-let eventsCards = function(){
+window.onload = () => {
+    openMenuTopBar();
+    closeMenuTopBar();
     
+}
 
-    cardAutomation.addEventListener('click', function(event){
+openMenuTopBar = () => {
+    let menuTopBar = document.querySelector('#menu-top-bar');
+    let menuTopBarOpen = document.querySelector('#menu-top-bar-open');
+    menuTopBar.addEventListener('click', ()=> {
+        if(menuTopBar.classList.contains('close')){
+            menuTopBar.classList.remove('close');
+            menuTopBarOpen.classList.remove('close');
+        }else{
+            menuTopBar.classList.add('close');
+            menuTopBarOpen.classList.add('close');
+        }
 
-        cardAutomation.style.backgroundColor = '#0070ff'
-        cardAutomation.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100%'
-                item.firstChild.style.height = '100%'
-                item.firstChild.style.borderTopLeftRadius = '30px'
-                item.firstChild.style.borderTopRightRadius = '30px'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#fff'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#fff'
-            }
-        
-        })
+    });
+}
 
-        cardDesign.style.backgroundColor = '#ffffff'
-        cardDesign.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
-        cardSoftware.style.backgroundColor = '#ffffff'
-        cardSoftware.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
+closeMenuTopBar = ()=> {
+    let menuTopBar = document.querySelector('#menu-top-bar');
+    let menuTopBarOpen = document.querySelector('#menu-top-bar-open');
+    let menuAbout = document.querySelector('#menu-about');
+    let menuService = document.querySelector('#menu-service');
+    let menuContact = document.querySelector('#menu-contact');
+
+    menuAbout.addEventListener('click', ()=>{
+        menuTopBar.classList.add('close');
+        menuTopBarOpen.classList.add('close');
     })
 
-    
-
-    cardDesign.addEventListener('click', function(event){
-
-        
-        cardDesign.style.backgroundColor = '#0070ff'
-        cardDesign.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100%'
-                item.firstChild.style.height = '100%'
-                item.firstChild.style.borderTopLeftRadius = '30px'
-                item.firstChild.style.borderTopRightRadius = '30px'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#fff'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#fff'
-            }
-        
-        })
-        
-        cardAutomation.style.backgroundColor = '#ffffff'
-        cardAutomation.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
-        cardSoftware.style.backgroundColor = '#ffffff'
-        cardSoftware.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
+    menuService.addEventListener('click', ()=>{
+        menuTopBar.classList.add('close');
+        menuTopBarOpen.classList.add('close');
     })
 
-    cardSoftware.addEventListener('click', function(event){
-
-        
-        cardSoftware.style.backgroundColor = '#0070ff'
-        cardSoftware.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100%'
-                item.firstChild.style.height = '100%'
-                item.firstChild.style.borderTopLeftRadius = '30px'
-                item.firstChild.style.borderTopRightRadius = '30px'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#fff'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#fff'
-            }
-        
-        })
-
-        cardAutomation.style.backgroundColor = '#ffffff'
-        cardAutomation.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
-        cardDesign.style.backgroundColor = '#ffffff'
-        cardDesign.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
-        
+    menuContact.addEventListener('click', ()=>{
+        menuTopBar.classList.add('close');
+        menuTopBarOpen.classList.add('close');
     })
 }
 
-let eventScrollCards = function(){
-    document.addEventListener('scroll', function(e){
-        cardAutomation.style.backgroundColor = '#ffffff'
-        cardAutomation.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
-
-        cardDesign.style.backgroundColor = '#ffffff'
-        cardDesign.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
-
-        cardSoftware.style.backgroundColor = '#ffffff'
-        cardSoftware.childNodes.forEach(function(item){
-            if(item.classList == 'card-giga'){
-                item.firstChild.style.width = '100px'
-                item.firstChild.style.height = '100px'
-                item.firstChild.style.borderRadius = '50%'
-            }else if(item.classList == 'card-title'){
-                item.style.color = '#000000'
-            }else if(item.classList == 'card-text'){
-                item.style.color = '#666666'
-            }
-        })
-    })
-}
-
-let eventScrollPage = function(){
-    let sobre = document.querySelector('#sobre')
-    let servicos = document.querySelector('#servicos')
-    let contato = document.querySelector('#contato')
-    document.addEventListener('scroll', function(){
-        
-        console.log(window.pageYOffset)
-        if(window.pageYOffset >= 200){
-            sobre.classList.remove('disable')
-           
-        }else{
-            sobre.classList.add('disable')
-            
-        }
-
-        if(window.pageYOffset >= 800){
-            servicos.classList.remove('disable')
-           
-        }else{
-            servicos.classList.add('disable')
-            
-        }
-
-        if(window.pageYOffset >= 1300){
-            contato.classList.remove('disable')
-           
-        }else{
-            contato.classList.add('disable')
-            
-        }
-    })
-}
-
-let eventTheme = function(){
-    lightDark.addEventListener('click', function(e){
-        
-        if(e.target.dataset.theme == 'light'){
-            
-            e.target.dataset.theme = 'dark'
-            e.target.classList = 'far fa-moon'
-            content.classList.remove('light')
-            content.classList.add('dark')
-            document.body.style.backgroundColor = '#111'
-            foot.style.backgroundColor = '#111'
-            foot.style.color = '#fafafa'
-        }else{
-            
-            e.target.dataset.theme = 'light'
-            e.target.classList = 'far fa-sun'
-            content.classList.remove('dark')
-            content.classList.add('light')
-            document.body.style.backgroundColor = '#fafafa'
-            foot.style.backgroundColor = '#fafafa'
-            foot.style.color = '#111'
-        }
-    })
-}

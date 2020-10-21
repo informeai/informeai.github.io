@@ -1,357 +1,733 @@
 /* Fontes */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,900;1,600&display=swap');
+
+:root{
+    --background-color: #fafbff;
+    --primary-color: #0070ff;
+    --secondary-color: #6f47ff;
+    --primary-text-color: #333;
+    --secondary-text-color: #666;
+    --gold: #f8af73;
+    --gold-light: #ffc99e;
+    --light-blue: #bbcee7;
+}
+
 *{
     font-size: 16px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #000000;
+    font-family: 'Poppins',sans-serif;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 body{
-    margin: 30px;
-    background-color: #fafafa;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    
+}
+
+/* Home */
+#home{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/img/back_home.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100vw;
+    height: 600px;
+    background-attachment: 0;
+    z-index: 1;
+}
+#home::after{
+    content: '';
+    position: absolute;
+    width: 40vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg,var(--secondary-color), var(--primary-color));
+    z-index: 2;
+}
+#top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+   
+}
+#top-bar #icon-home{
+    width: 10px;
+    height: 70%;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#top-bar #title-home{
+    position: absolute;
+    left: 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+}
+#top-bar #links{
+    position: absolute;
+    left: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-bar a{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    margin: 0px 40px;
+    transition: 0.5s;
     user-select: none;
 }
-#content.light{
-    background-color: #fafafa;
-    transition: all 1s;
+#top-bar a:hover{
+    color: var(--secondary-color);
 }
-#content.dark{
-    background-color: #111;
-    transition: all 1s;
+#top-bar i{
+    margin-right: 10px;
 }
-#content.dark #soft,
-#content.dark #des,
-#content.dark div#theme i,
-#content.dark i.fab,
-#content.dark .sub-title,
-#content.dark .title,
-#content.dark .text-sobre,
-#content.dark .text-contato,
-#content.dark a#nav-contato,
-#content.dark a{
-    color: #fafafa;
-}
-#content.dark section div#foot{
-    color: #fafafa;
-}
-#content.dark #nav-bar svg path{
-    fill: #666666;
-}
-#content.dark #nav-bar span{
-    color: #fafafa;
-}
-/* MENU BAR*/
-section#nav-bar nav{
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 30px;
-    flex-direction: row;
-}
-section#nav-bar nav a{
-    text-decoration: none;
-    color: #666666;
-    font-weight: 400;
-    padding-left: 20px;
-}
-section#nav-bar nav a#nav-contato:hover,
-section#nav-bar nav a:hover{
-    color: #0070ff;
-    transition: 0.3s;
-}
-section#nav-bar nav a#nav-contato{
-    color: #666666;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-section#nav-bar div{
+#menu-top-bar{
+    position: fixed;
+    top: 10px;
+    right: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-div#icon span{
-    color: #fafafa;
-    font-size: 1.1rem;
-    font-family: monospace;
-    position: absolute;
-    bottom: 0;
-    left: 1;
-    transform: translateY(3px);
-}
-div#icon svg{
+    flex-direction: column;
     width: 30px;
     height: 30px;
-}
-div#icon svg:hover path{
-    transition: 0.3s;
-    fill: #0070ff;
-}
-section#nav-bar article#soft-des{
-    margin-top: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-section#nav-bar article div{
-    font-size: 7rem;
-    font-weight: 800;
-    font-family: "Inter", sans-serif;
-}
-section#nav-bar article#soft-des #soft{
-    position: relative;
-}
-section#nav-bar #theme{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-    color: #666666;
-}
-section#nav-bar #theme i{
-    color: #666666;
-}
-/* ESTILIZANDO */
-section#nav-bar article#soft-des #soft::after{
-    content: 'Software';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, #0761d1, #0070ff,#3291ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    background-clip: text;
-    width: 100%;
-    height: 100%;
-    animation: animate 8s infinite;
-    
-}
-section#nav-bar article#soft-des #des::after{
-    content: 'Design';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, #eb367f, #ff0080,#f81ce5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    background-clip: text;
-    animation: animate 8s  3s infinite;
-}
-
-@keyframes animate{
-    0%,16%,100%{
-        opacity: 1;
-    }
-    33%,83%{
-        opacity: 0;
-    }
-}
-
-/* SOBRE */
-
-section#sobre{
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    opacity: 1;
-    transition: all 1s ease-in-out;
-}
-section#sobre.disable{
-    display: flex;
-    transform: translateX(-100px);
-    opacity: 0;
-}
-section#sobre .sub-title{
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-align: center;
-}
-section#sobre .title{
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
-}
-section#sobre article{
-    position: relative;
-}
-section#sobre article .text-sobre{
-    margin-top: 5rem;
-    text-align: justify;
-    max-width: 500px;
-    font-size: 2rem;
-}
-
-/* SERVICOS */
-section#servicos{
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    opacity: 1;
-    transition: all 1s ease-in-out;
-}
-section#servicos.disable{
-    display: flex;
-    transform: translateX(100px);
-    opacity: 0;
-}
-section#servicos .sub-title{
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-align: center;
-}
-section#servicos .title{
-    font-size: 3rem;
-    font-weight: 600;
-}
-section#servicos article#cards{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 10rem;
-    position: relative;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
     cursor: pointer;
+    z-index: 7;
+    transition: 0.5s;
     
 }
-section#servicos article#cards div#card-design,
-section#servicos article#cards div#card-software,
-section#servicos article#cards div#card-automation{
-    width: 300px;
-    height: 400px;
-    background-color: #fff;
-    margin: 10px;
-    border-radius: 30px;
-    border: 1px solid #0070ff;
+
+#menu-top-bar.close{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+#menu-top-bar.close::before{
+    content: '';
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 90%;
+    height: 2px;
+    transform: rotate(0);
+    background-color: var(--background-color);
+    border-radius: 1px;
+    transition: 0.5s;
+    
+
+}
+#menu-top-bar::before{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    transform-origin: center;
+    transform: translate(-4px,3px);
+    transform: rotate(45deg);
+    background-color: var(--background-color);
+    border-radius: 2px;
+    transition: 0.5s;
 }
 
-section#servicos article#cards div.card-title{
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #000000;
+#menu-top-bar.close::after{
+    content: '';
+    width: 90%;
+    height: 2px;
+    transform: rotate(0);
+    background-color: var(--background-color);
+    border-radius: 1px;
+    transition: 0.5s;
 }
-section#servicos article#cards div.card-text{
-    text-align: justify;
-    font-size: 0.8rem;
-    font-weight: 400;
-    padding: 20px;
-    color: #666666;
+#menu-top-bar::after{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    transform-origin: center;
+    transform: translate(3px,-7px);
+    transform: rotate(-45deg);
+    background-color: var(--background-color);
+    border-radius: 2px;
+    transition: 0.5s;
 }
-section#servicos article#cards div.card-giga{
-    width: 100%;
-    height: 50%;
+
+#home #title-name{
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    position: absolute;
+    top: 30%;
+    left: 60px;
+}
+#home #title-name::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+#home #text-home{
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    font-size: 5rem;
+    font-weight: 500;
+    width: 45%;
+    text-align: start;
+    
+}
+
+/* Menu Top Bar Open */
+#menu-top-bar-open.close{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 0vw;
+    height: 0vh;
+    transition: 0.5s;
+    background-color: var(--background-color);
+    z-index: 6;
+}
+#menu-top-bar-open{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    transition: 0.5s;
+    background-color: var(--background-color);
+    z-index: 6;
+}
+#menu-top-bar-open #menus{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 300px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    
 }
-section#servicos article#cards div.card-giga img{
+#menus a{
+    
+    font-size: 3rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 20px 0px;
+    text-align: left;
+    text-transform: uppercase;
+    text-align: start;
+    color: var(--primary-text-color);
+    transition: 0.5s;
+}
+#menus a:hover{
+    color: var(--primary-color);
+}
+
+/* Desktop */
+#desktop{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    
+    z-index: 5;
+}
+#desktop #tela{
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+}
+#desktop #dots{
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+#desktop #dots:hover{
+    transform: translateX(-20px) scale(1.1);
+    box-shadow: 0px 18px 39px rgba(0, 0, 0, 0.3);
+}
+#desktop #c-add{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 250px;
+    top: 50%;
+}
+#desktop #user{
+    position: absolute;
+    background-attachment: 0;
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    bottom: -100px;
+    left: -100px;
+    transition: 0.5s;
+    object-fit: cover;
+    border-radius: 20px;
+    
+}
+#desktop #user:hover{
+    transform: translateX(20px) scale(1.1);
+    box-shadow: 0px 18px 39px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Sobre */
+#about{
+    position: absolute;
+    width: 100vw;
+    height: 700px;
+    top: 1000px;
+    left: 0;
+    
+    animation: 10s animateAbout infinite ease-in-out;
+}
+@keyframes animateAbout{
+    0%{
+        background: linear-gradient(0deg, var(--secondary-color), var(--primary-color));
+    }
+    25%{
+        background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    }
+    50%{
+        background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    }
+    75%{
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    }
+    100%{
+        background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+    }
+}
+#title-about{
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    font-size: 0.9rem;
+    color: var(--gold);
+}
+#title-about::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--gold);
+}
+#text-about{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 5rem;
+    font-weight: 500;
+    width: 50%;
+    color: var(--background-color);
+}
+#sub-text-about{
+    position: absolute;
+    top: 600px;
+    left: 20px;
+    font-size: 1rem;
+    color: var(--light-blue);
+    font-weight: 400;
+}
+#money i{
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    font-size: 10rem;
+    color: #0eac0e;
+    transition: 0.5s;
+    animation: 4s animateMoney infinite;
+}
+@keyframes animateMoney{
+    0%,100%{
+        transform: scaleX(0.9);
+    }
+    50%{
+        transform: scaleX(1.1);
+    }
+}
+.traces{
+    position: absolute;
+    top: 120px;
+    right: 300px;
     width: 100px;
     height: 100px;
-    background-color: #eaeaea;
-    margin: 5px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-right: 10px;
+}
+.traces span{
+    background-color: var(--light-blue);
+    height: 10px;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: 0.5s;
+    
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3), 0px -2px 2px inset rgba(0, 0, 0, 0.3);
+    animation: 2s animateTraces ease-in-out infinite;
+}
+.traces span:nth-child(1){
+
+    animation-delay: 0.5s;
+}
+.traces span:nth-child(2){
+    width: 50px;
+    animation-delay: 1s;
+}
+.traces span:nth-child(3){
+    width: 90px;
+    animation-delay: 1.5s;
+}
+@keyframes animateTraces{
+    0%{
+        width: 100%;
+        opacity: 1;
+        
+    }
+    100%{
+        width: 0;
+        opacity: 0;
+        
+    }
+}
+.lamp i{
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    font-size: 20rem;
+    color: var(--gold);
+    transition: 0.5s;
+    z-index: 2;
+    animation: 1s animateLamp ease-in-out infinite;
+}
+@keyframes animateLamp{
+    0%, 100%{
+        
+    }
+    50%{
+        transform: scaleY(1.1);
+    }
+}
+.lamp i#shadow{
+    position: absolute;
+    bottom: 120px;
+    right: 170px;
+    font-size: 15rem;
+    color: #8d09fa;
+    transition: 0.5s;
+    z-index: 1;
+    animation: 1s animateShadow ease-in-out infinite;
+}
+
+@keyframes animateShadow{
+    0%,100%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+/* Servicos */
+#services{
+    position: absolute;
+    top: 1800px;
+    left: 0;
+    
+}
+#title-service{
+    position: absolute;
+    left: 60px;
+    width: 100px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+
+}
+#title-service::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+#text-service{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 5rem;
+    font-weight: 500;
+    width: 40vw;
+    color: var(--primary-text-color);
+    
+}
+#list-cards-service{
+    
+    position: absolute;
+    top: 400px;
+    left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    object-fit: cover;
+    width: 100vw;
+    height: 600px;
+}
+.card-service{
+    background-color: var(--background-color);
+    list-style: none;
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 25px; 
+    width: 400px;
+    height: 500px;
+    transition: 0.5s;
+    user-select: none;
+    cursor: pointer;
+}
+.card-service:hover{
+    box-shadow: 0px 50px 50px lightgray;
+    transform: translate(0px,-5px);
+    background-color: #fff;
+    transition: 0.5s;
+}
+.card-service:hover i{
+    font-size: 10rem;
+}
+.avatar-card{
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    transition: 1s;
-
-
-}
-section#servicos article#cards div.card-giga img:hover{
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    transition: 0.5s ease-in-out;
-}
-/* CONTATO */
-section#contato{
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
-    opacity: 1;
-    transition: all 1s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,var(--secondary-color),var(--primary-color));
 }
-section#contato.disable{
-    display: flex;
-    transform: translateX(-100px);
-    opacity: 0;
+.avatar-card i{
+    font-size: 8rem;
+    transition: 0.5s;
+    
 }
-section#contato article .sub-title{
-    font-size: 1rem;
+.avatar-card i#web{
+    color: #eb5050;
+}
+.avatar-card i#mobile{
+    color: #eeac33;
+}
+.avatar-card i#desk{
+    color: #36fde3;
+}
+
+.card-service .title-card{
+    margin-top: 50px;
+    font-size: 1.3rem;
     font-weight: 400;
-    letter-spacing: 3px;
+    color: var(--primary-text-color);
+}
+.card-service .text-card{
+    margin-top: 50px;
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    padding: 0px 20px;
     text-align: center;
-    text-align: center;
-}
-section#contato article .title{
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
-}
-section#contato article .text-contato{
-    margin-top: 3rem;
-    max-width: 500px;
-    font-size: 2rem;
-    text-align: justify;
-}
-section#contato article#links{
-    margin-top: 5rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: initial;
-    flex-direction: column;
-    text-align: start;
-}
-section#contato article#links a,i{
-    font-size: 1.2rem;
-    margin-right: 5px;
-    text-decoration: none;
+
 }
 
-/* FOOTER */
-div#foot{
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    width: 100%;
-    text-align: center;
+/* Contato */
+#contact{
+    position: absolute;
+    top: 3000px;
+    left: 0;
+    width: 100vw;
+    height: 600px;
+    background: linear-gradient(135deg,var(--secondary-color),var(--primary-color));
 }
+#contact i{
+    margin-right: 20px;
+    color: var(--background-color);
+}
+#title-contact{
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    font-size: 0.9rem;
+    color: var(--gold);
+}
+#title-contact::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--gold);
+}
+#text-contact{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 40vw;
+    font-size: 5rem;
+    color: var(--background-color);
+    font-weight: 500;
+}
+#sub-text-contact{
+    position: absolute;
+    top: 420px;
+    left: 20px;
+    width: 40vw;
+    color: var(--light-blue);
+}
+#email{
+    position: absolute;
+    top: 500px;
+    left: 20px;
+    width: 40vw;
+    color: var(--light-blue);
+}
+#whatsapp{
+    position: absolute;
+    top: 550px;
+    left: 20px;
+    width: 40vw;
+    color: var(--light-blue);
+}
+#info i{
+    position: absolute;
+    bottom: 80px;
+    right: 200px;
+    font-size: 25rem;
+    transition: 0.5s;
+    color: var(--light-blue);
+    animation: 5s animateInfo infinite;
+}
+@keyframes animateInfo{
+    0%,100%{
+        transform: scaleY(1);
+        color: var(--light-blue);
+    }
+    
+    50%{
+        transform: scaleY(1.1);
+        color: var(--background-color);
+    }
+}
+#phone i{
+    position: absolute;
+    bottom: 50px;
+    right: 450px;
+    font-size: 5rem;
+    transform: rotate(90deg);
+    transition: 0.5s;
+    color: #eb5050;
+    animation: 1s animatePhone infinite;
+}
+@keyframes animatePhone{
+    0%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(100deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+#envelope i{
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    font-size: 4rem;
+    transform: rotate(-40deg);
+    transition: 0.5s;
+    animation: 3s animateEnvelope infinite;
+    animation-delay: 4s;
+    color: var(--gold);
+}
+@keyframes animateEnvelope{
+    0%{
+        transform: translate(10px,-10px) rotate(-40deg) scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: translate(50px,-50px) rotate(-40deg) scale(0.5) ;
+        opacity: 0.5;
+        
+    }
+    100%{
+        transform: translate(70px,-70px) rotate(-40deg) scale(0) rotate(180deg);
+        opacity: 0;
+
+    }
+}
+
 
 /* MEDIAS */
 
@@ -364,97 +740,723 @@ div#foot{
   
     
     
-  }
-  
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-  
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    
-    
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    
-    
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-    
-    
-  }
-  
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
-  
-  @media (min-width: 481px) and (max-width: 767px) {
-    
-    section#servicos article#cards{
-        flex-direction: column;
-        
-    }
-    section#contato article .text-contato,
-    section#sobre article .text-sobre{
-        font-size: 1.2rem;
-    }
-    section#servicos div.title,
-    section#contato div.title,
-    section#sobre div.title{
-        font-size: 2rem;
-    }
-    section#servicos div.sub-title,
-    section#contato div.sub-title,
-    section#sobre div.sub-title{
-        font-size: 0.8rem;
-    }
+}
 
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    body{
+        overflow-x: none;
+    }
+  
+  #home::after{
+      display:none;
+  }
+  #home{
+      background-size: 70%;
+      height: 400px;
+  }
+  #home #text-home{
+    font-size: 2rem;
+    width: 90vw;
+    }
+  #home #desktop{
+    display: none;
+  }
+  #top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
   }
   
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 280px to 479px
-  */
-  
-  @media (min-width: 280px) and (max-width: 480px) {
-    #content{
-        max-width: 480px;
-    }
-    section#servicos article#cards{
-        flex-direction: column;
-        
-    }
-    section#nav-bar article div{
-        font-size: 2rem;
-    }
-    section#contato article .text-contato,
-    section#sobre article .text-sobre{
-        font-size: 1rem;
-    }
-    section#servicos div.title,
-    section#contato div.title,
-    section#sobre div.title{
-        font-size: 2rem;
-    }
-    section#servicos .sub-title,
-    section#contato .sub-title,
-    section#sobre .sub-title{
-        font-size: 0.8rem;
-    }
+  #top-bar #links{
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  #top-bar #links i{
+      margin-bottom: 20px;
+  }
+  #menu-top-bar.close{
+      right: 20px;
+  }
+  
+  #menu-top-bar.close::before,
+  #menu-top-bar.close::after{
+      
+      background-color: var(--secondary-color);
+  }
+  #menu-top-bar-open #menus{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+#menus a{
+    
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 20px 0px;
+    text-align: left;
+    text-transform: uppercase;
+    text-align: end;
+    color: var(--primary-text-color);
+    transition: 0.5s;
+}
+#money i{
+    display: none;
+}
+.traces{
+    display: none;
+}
+.lamp i{
+    display: none;
+}
+#about{
+    top: 500px;
+    height: 400px;
+}
+#text-about{
+    font-size: 2rem;
+    width: 90vw;
+}
+#sub-text-about{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    font-size: 1rem;
+    color: var(--light-blue);
+    font-weight: 400;
+    width: 90vw;
+}
+#services{
+    top: 1000px;
+}
+#text-service{
+    margin-top: 20px;
+    font-size: 2rem;
+    width: 90vw;
+    
+}
+#list-cards-service{
+    
+    position: absolute;
+    top: 700px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 600px;
+}
+.card-service{
+    background-color: var(--background-color);
+    list-style: none;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 25px; 
+    width: 90%;
+    height: 500px;
+    transition: 0.5s;
+    user-select: none;
+    cursor: pointer;
+}
+#contact{
+    height: 600px;
+}
+#text-contact{
+    font-size: 2rem;
+    width: 100vw;
+}
+#sub-text-contact{
+    top: 200px;
+    width: 90vw;
+}
+
+#info i{
+    display: none;
+}
+#phone i{
+    display: none;
+}
+#envelope i{
+    display: none;
+}
+#email{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+#whatsapp{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body{
+        overflow-x: none;
+    }
+  
+  #home::after{
+      display:none;
+  }
+  #home{
+      background-size: 70%;
+      height: 400px;
+  }
+  #home #text-home{
+    font-size: 2rem;
+    width: 90vw;
+    }
+  #home #desktop{
+    display: none;
+  }
+  #top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+  }
+  
+  #top-bar #links{
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #top-bar #links i{
+      margin-bottom: 20px;
+  }
+  #menu-top-bar.close{
+      right: 20px;
+  }
+  
+  #menu-top-bar.close::before,
+  #menu-top-bar.close::after{
+      
+      background-color: var(--secondary-color);
+  }
+  #menu-top-bar-open #menus{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+#menus a{
+    
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 20px 0px;
+    text-align: left;
+    text-transform: uppercase;
+    text-align: end;
+    color: var(--primary-text-color);
+    transition: 0.5s;
+}
+#money i{
+    display: none;
+}
+.traces{
+    display: none;
+}
+.lamp i{
+    display: none;
+}
+#about{
+    top: 500px;
+    height: 400px;
+}
+#text-about{
+    font-size: 2rem;
+    width: 90vw;
+}
+#sub-text-about{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    font-size: 1rem;
+    color: var(--light-blue);
+    font-weight: 400;
+    width: 90vw;
+}
+#services{
+    top: 1000px;
+}
+#text-service{
+    margin-top: 20px;
+    font-size: 2rem;
+    width: 90vw;
+    
+}
+#list-cards-service{
+    
+    position: absolute;
+    top: 700px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 600px;
+}
+.card-service{
+    background-color: var(--background-color);
+    list-style: none;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 25px; 
+    width: 90%;
+    height: 500px;
+    transition: 0.5s;
+    user-select: none;
+    cursor: pointer;
+}
+#contact{
+    height: 600px;
+}
+#text-contact{
+    font-size: 2rem;
+    width: 100vw;
+}
+#sub-text-contact{
+    top: 200px;
+    width: 90vw;
+}
+
+#info i{
+    display: none;
+}
+#phone i{
+    display: none;
+}
+#envelope i{
+    display: none;
+}
+#email{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+#whatsapp{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body{
+        overflow-x: none;
+    }
+  
+  #home::after{
+      display:none;
+  }
+  #home{
+      background-size: 70%;
+      height: 400px;
+  }
+  #home #text-home{
+    font-size: 2rem;
+    width: 90vw;
+    }
+  #home #desktop{
+    display: none;
+  }
+  #top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+  }
+  
+  #top-bar #links{
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #top-bar #links i{
+      margin-bottom: 10px;
+  }
+  #menu-top-bar.close{
+      right: 20px;
+  }
+  
+  #menu-top-bar.close::before,
+  #menu-top-bar.close::after{
+      
+      background-color: var(--secondary-color);
+  }
+  #menu-top-bar-open #menus{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+#menus a{
+    
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 20px 0px;
+    text-align: left;
+    text-transform: uppercase;
+    text-align: end;
+    color: var(--primary-text-color);
+    transition: 0.5s;
+}
+#money i{
+    display: none;
+}
+.traces{
+    display: none;
+}
+.lamp i{
+    display: none;
+}
+#about{
+    top: 500px;
+    height: 400px;
+}
+#text-about{
+    font-size: 2rem;
+    width: 90vw;
+}
+#sub-text-about{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    font-size: 1rem;
+    color: var(--light-blue);
+    font-weight: 400;
+    width: 90vw;
+}
+#services{
+    top: 1000px;
+}
+#text-service{
+    margin-top: 20px;
+    font-size: 2rem;
+    width: 90vw;
+    
+}
+#list-cards-service{
+    
+    position: absolute;
+    top: 700px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 600px;
+}
+.card-service{
+    background-color: var(--background-color);
+    list-style: none;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 25px; 
+    width: 90%;
+    height: 500px;
+    transition: 0.5s;
+    user-select: none;
+    cursor: pointer;
+}
+#contact{
+    height: 600px;
+}
+#text-contact{
+    font-size: 2rem;
+    width: 100vw;
+}
+#sub-text-contact{
+    top: 200px;
+    width: 90vw;
+}
+
+#info i{
+    display: none;
+}
+#phone i{
+    display: none;
+}
+#envelope i{
+    display: none;
+}
+#email{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+#whatsapp{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+  
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 280px to 479px
+*/
+
+@media (min-width: 280px) and (max-width: 480px) {
+
+    body{
+        overflow-x: none;
+    }
+  
+  #home::after{
+      display:none;
+  }
+  #home{
+      background-size: 70%;
+      height: 400px;
+  }
+  #home #text-home{
+    font-size: 2rem;
+    width: 90vw;
+    }
+  #home #desktop{
+    display: none;
+  }
+  #top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+  }
+  
+  #top-bar #links{
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #top-bar #links i{
+      margin-bottom: 20px;
+  }
+  #menu-top-bar.close{
+      right: 20px;
+  }
+  
+  #menu-top-bar.close::before,
+  #menu-top-bar.close::after{
+      
+      background-color: var(--secondary-color);
+  }
+  #menu-top-bar-open #menus{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+#menus a{
+    
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 20px 0px;
+    text-align: left;
+    text-transform: uppercase;
+    text-align: end;
+    color: var(--primary-text-color);
+    transition: 0.5s;
+}
+#money i{
+    display: none;
+}
+.traces{
+    display: none;
+}
+.lamp i{
+    display: none;
+}
+#about{
+    top: 500px;
+    height: 400px;
+}
+#text-about{
+    font-size: 2rem;
+    width: 90vw;
+}
+#sub-text-about{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    font-size: 1rem;
+    color: var(--light-blue);
+    font-weight: 400;
+    width: 90vw;
+}
+#services{
+    top: 1000px;
+}
+#text-service{
+    margin-top: 20px;
+    font-size: 2rem;
+    width: 90vw;
+    
+}
+#list-cards-service{
+    
+    position: absolute;
+    top: 700px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 600px;
+}
+.card-service{
+    background-color: var(--background-color);
+    list-style: none;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 25px; 
+    width: 90%;
+    height: 500px;
+    transition: 0.5s;
+    user-select: none;
+    cursor: pointer;
+}
+#contact{
+    height: 600px;
+}
+#text-contact{
+    font-size: 2rem;
+    width: 100vw;
+}
+#sub-text-contact{
+    top: 200px;
+    width: 90vw;
+}
+
+#info i{
+    display: none;
+}
+#phone i{
+    display: none;
+}
+#envelope i{
+    display: none;
+}
+#email{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+#whatsapp{
+    font-size: 0.9rem;
+    width: 100vw;
+}
+  
+}
