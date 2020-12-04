@@ -1,117 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142610837-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-142610837-2');
-    </script>
-    <!--Adsense-->
-    <script data-ad-client="ca-pub-2120118381725373" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="description" content="Conhecimento e Criação de Ferramentas usando a linguagem Python ou dart, analise de
-    Dados, aprendizado de maquina, mineração de textos, entre outros. Automação e Soluções para o mundo virtual, como tambem idéias
-    que contribui para a comunidade.">
-    <script src="https://kit.fontawesome.com/e13d856e8c.js" crossorigin="anonymous"></script>
-    <!-- Material icons-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Font awesome-->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
     <script src="https://kit.fontawesome.com/146e4687a7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-    <title>Informeai</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300,0,400;0,500;0,600;0,900;1,300&display=swap" rel="stylesheet">
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>informeai</title>
 </head>
-
 <body>
-
-    <section id="home">
-        <nav id="top-bar">
-            <div id="icon-home"></div>
-            <div id="title-home">nformeai</div>
-            <div id="links">
-                <a href="https://www.facebook.com/informeai" target="__blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/informeaioficial/" target="__blank"><i class="fab fa-instagram"></i></a>
+    <section id="nav-bar">
+        <div id="nav">
+            <div id="title">
+                <div id="rect"></div>
+                <span>nformeai</span>
             </div>
-            
-            <span id="menu-top-bar" class="close"></span>
-        </nav>
-
-        <div id="title-name">Wellington Gadelha</div>
-        <div id="text-home">
-            Olá, sou desenvolvedor e estou aqui para ajuda-lo.
         </div>
-        <div id="desktop">
-            <img id="tela" src="./img/tela.png" alt="desktop">
-            <img id="dots" src="./img/card_dots.png" alt="dots">
-            <img id="c-add" src="./img/card_add.png" alt="add">
-            <img id="user" src="./img/card_user.png" alt="user">
+        <div id="links">
+            <a href="#solutions">Soluções</a>
+            <a href="#contact">Contato</a>
         </div>
-        
+        <div id="socials">
+            <a href="https://github.com/informeai/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/informeaioficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </section>
-
     <section id="about">
-        <div id="title-about">Sobre</div>
-        <div id="text-about">Construindo aplicações com foco no seu objetivo.</div>
-        <div id="sub-text-about">Desenvolver ideias, criar soluções e melhorar a sua marca não deve tirar sua tranquilidade.</div>
-        <span id="money"><i class="fas fa-money-bill-wave-alt"></i></span>
-        <span class="lamp"><i class="fab fa-medapps"></i></span>
-        <span class="lamp"><i id="shadow" class="fab fa-medapps"></i></span>
-        <div class="traces">
-            <span></span>
-            <span></span>
-            <span></span>
+        <h1 id="title-about">Desenvolvimento de Soluções</h1>
+        <div id="text-about">
+            Desenvolver ferramentas e soluções em software com foco no usuário final sempre será o objetivo.<br>Sua idéia é Front-end, Back-end, scripts, aplicativos... ?<br>Entre em contato conosco.
+        </div>
+        <div id="title-tec">Tecnologias</div>
+        <div id="icons-tec">
+            <img src="https://img.icons8.com/color/48/000000/python.png"/>
+            <i id="ic-html" class="fab fa-html5"></i>
+            <i id="ic-js" class="fab fa-js-square"></i>
+            <i id="ic-css" class="fab fa-css3-alt"></i>
+            <img src="https://img.icons8.com/color/48/000000/flutter.png"/>
         </div>
     </section>
-
-    <section id="services">
-        <div id="title-service">Serviços</div>
-        <div id="text-service">Varios serviços sob demanda.</div>
-        <ul id="list-cards-service">
-            <li class="card-service">
-                <div class="avatar-card"><i id="web" class="fas fa-paper-plane"></i></div>
-                <span class="title-card">Web development</span>
-                <span class="text-card">Criação de sites, landpages, SPAs, design UI, entre outros...</span>
+    <section id="solutions">
+        <div id="title-solutions">Soluções</div>
+        <ul id="cards-solutions">
+            <li>
+                <div class="card">
+                    <i class="fas fa-robot"></i>
+                    <span class="title-card">Bots</span>
+                    <span class="desc-card">Criação de bots para automação de serviços sob demanda.</span>
+                </div>
             </li>
-            <li class="card-service">
-                <div class="avatar-card"><i id="mobile" class="fas fa-mobile"></i></div>
-                <span class="title-card">Mobile</span>
-                <span class="text-card">Criação de aplicativos android e ios.</span>
+            <li>
+                <div class="card">
+                    <i class="fab fa-chrome"></i>
+                    <span class="title-card">Web</span>
+                    <span class="desc-card">Criação de webapps e serviços front-end.</span>
+                </div>
             </li>
-            <li class="card-service">
-                <div class="avatar-card"><i id="desk" class="fas fa-laptop"></i></div>
-                <span class="title-card">Desktop</span>
-                <span class="text-card">Criação de aplicativos que rodam nativamente no seu computador.</span>
+            <li>
+                <div class="card">
+                    <i class="fas fa-terminal"></i>
+                    <span class="title-card">Scripts</span>
+                    <span class="desc-card">Criação de scripts de uso geral.</span>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="title-card">Aplicativos</span>
+                    <span class="desc-card">Desenvolvimento de aplicativos mobile.</span>
+                </div>
             </li>
         </ul>
     </section>
 
     <section id="contact">
-        <div id="title-contact">Contato</div>
-        <div id="text-contact">Entre em contato conosco.</div>
-        <div id="sub-text-contact">Eu amo o que faço, e ficarei feliz em resolver seu problema. Não deixe sua ideia no papel, veja ela tomar vida...</div>
-        <div id="email"><i class="fas fa-envelope"></i>contato.informeai@gmail.com</div>
-        <div id="whatsapp"><i class="fab fa-whatsapp"></i>+55(88)99778-5306</div>
-        <span id="info"><i class="fas fa-info"></i></span>
-        <span id="phone"><i class="fas fa-phone"></i></span>
-        <span id="envelope"><i class="fas fa-envelope"></i></span>
+        <div id="title-desc-contact">
+            <div id="title-contact">Contato</div>
+            <div id="desc-contact">Entre em contato conosco.</div>
+        </div>
+        <form method="post">
+        <label id="label-name" for="name-contact">Nome</label>
+        <input type="text" name="name-contact" id="name" placeholder="Nome" autocomplete="off">
+        <label id="label-email" for="email-contact">Email</label>
+        <input type="email" name="email-contact" id="email" placeholder="Email" autocomplete="off">
+        <label id="label-msg" for="msg-contact">Mensagem</label>
+        <textarea id="msg" name="msg-contact" cols="30" rows="10" wrap="soft" maxlength="300" placeholder="Digite sua mensagem..." autocomplete="off"></textarea>
+        <div id="resp-email"></div>
+        <input id="enviar" type="submit" value="Enviar">
+        </form>
+
     </section>
+    <footer>
+        <div id="foot-links">
 
-    <div id="menu-top-bar-open" class="close">
-            <div id="menus">
-                <a id="menu-about" href="#about">sobre</a>
-                <a id="menu-service" href="#services">serviços</a>
-                <a id="menu-contact" href="#contact">contato</a>
+            <div id="products">
+    
             </div>
-    </div>
+            <div id="legal">
+                <span><a href="./terms.html">termos</a> e <a href="./policy.html">privacidade</a></span>
+            </div>
+        </div>
+        <div id="foot-title">
 
-    <script src="./js/index.js"></script>
+        </div>
+        <div id="social-copy">
+            <div id="copy">Copyright &copy 2020 Informeai. Todos os direitos reservados.</div>
+            <div id="social">
+                <a href="https://github.com/informeai/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/informeaioficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
 </body>
-
 </html>
