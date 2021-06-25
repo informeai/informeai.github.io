@@ -31,13 +31,15 @@ body {
 } */
 
 /* HEADER */
+
 header nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: var(--background-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  z-index: 100;
+  z-index: 10;
 }
 header nav .container {
   display: flex;
@@ -59,11 +61,11 @@ header nav svg path {
 .logo h1.title {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--primary-text-color);
 }
 .logo span {
   font-size: 1.5rem;
-  color: var(--primary-text-color);
+  color: var(--primary-color);
   font-weight: 300;
   padding-left: 0.12rem;
 }
@@ -73,6 +75,59 @@ header nav svg path {
 .menu.show {
   display: flex;
 }
+.menu.show ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.menu.show ul a {
+  text-decoration: none;
+  transition: 0.5s;
+  color: var(--primary-text-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.menu.show ul li {
+  position: relative;
+}
+.menu.show ul a::before {
+  content: '';
+  transition: 0.5s;
+  width: 0%;
+  height: 3px;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.menu.show ul a:hover {
+  color: var(--primary-color);
+}
+.menu.show ul a:hover::before {
+  width: 100%;
+}
+.menu.show #icon-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 20;
+  cursor: pointer;
+}
+#icon-menu {
+  cursor: pointer;
+}
+
 header nav .menu ul {
   list-style: none;
 }
@@ -80,7 +135,7 @@ header nav .menu ul {
 /* MAIN */
 main {
   margin-top: 5rem;
-  z-index: 1;
+  z-index: 9;
 }
 
 /* HOME */
