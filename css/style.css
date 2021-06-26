@@ -8,6 +8,8 @@
   --secondary-text-color: #595959;
   /* FONTS */
   --font: 'Poppins', sans-serif;
+  /* HEADER HEIGHT*/
+  --header-height: 4.5rem;
 }
 /* RESETS */
 * {
@@ -49,6 +51,7 @@ header nav {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   background-color: var(--background-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -147,8 +150,10 @@ header nav .menu ul {
 
 /* MAIN */
 main {
-  margin-top: 5rem;
   z-index: 9;
+}
+section {
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 /* HOME */
@@ -360,6 +365,76 @@ footer svg path {
 }
 
 /* Medias querys */
+/* min width >= 1200px*/
+@media (min-width: 1200px) {
+  /* LAYOUT */
+  .container {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 100%;
+  }
+
+  /* HEADER */
+  header {
+    width: 100vw;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav .menu {
+    position: absolute;
+    right: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  header nav #icon-menu {
+    display: none;
+  }
+  .menu #icon-close {
+    display: none;
+  }
+  .menu ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .menu ul li a:hover,
+  .menu ul li a.active {
+    color: var(--primary-color);
+  }
+  .menu ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    transition: width 0.2s;
+  }
+  .menu ul li a:hover::after,
+  .menu ul li a.active::after {
+    width: 100%;
+  }
+}
 
 /* tablet and ipad landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (orientation: portrait) {
