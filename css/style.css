@@ -1,9 +1,9 @@
 :root {
-  --hue: 219;
+  --hue: 229;
   --background-color: #fff;
   --background-color-light: #f9f9f9;
-  --primary-color: hsl(var(--hue), 100%, 50%);
-  --secondary-color: hsl(var(--hue), 100%, 65%);
+  --primary-color: hsl(var(--hue), 100%, 45%);
+  --secondary-color: hsl(var(--hue), 100%, 55%);
   --primary-text-color: #000;
   --secondary-text-color: #595959;
   /* FONTS */
@@ -373,11 +373,17 @@ footer svg path {
     margin-right: 4rem;
     width: 100%;
   }
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
 
   /* HEADER */
-  header {
+  /* header {
     width: 100vw;
-  }
+  } */
   header nav {
     position: fixed;
     top: 0;
@@ -430,9 +436,129 @@ footer svg path {
     bottom: -1.5rem;
     transition: width 0.2s;
   }
-  .menu ul li a:hover::after,
   .menu ul li a.active::after {
     width: 100%;
+  }
+  /* HOME */
+  #home .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #home img {
+    width: auto;
+    height: auto;
+    margin-right: 4rem;
+    order: 1;
+  }
+  #home header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-left: 4rem;
+    order: 0;
+  }
+
+  /* ABOUT */
+  #about .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  #about .container img {
+    width: auto;
+    height: auto;
+    margin-left: 4rem;
+  }
+  #about header {
+    margin-right: 4rem;
+  }
+  #about .title {
+    font-size: 2.5rem;
+  }
+  #about .subtitle {
+    font-size: 1.5rem;
+  }
+  /* SERVICES */
+  #services .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #services header {
+    margin: 4rem 0;
+  }
+  #services ul.cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  #services .card {
+    width: 20rem;
+    height: 25rem;
+  }
+  .card header {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .card .title {
+    font-size: 1.5rem;
+  }
+  .card .subtitle {
+    font-size: 1rem;
+  }
+
+  /* CONTACT */
+  #contact .container {
+    position: relative;
+    height: 18rem;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #contact header {
+    max-width: 50%;
+    margin-left: 4rem;
+  }
+  #contact .button {
+    position: absolute;
+    transition: 0.5s;
+    bottom: 0;
+    left: 0;
+    margin-left: 4rem;
+  }
+  #contact .button:hover {
+    background-color: var(--secondary-color);
+  }
+  #contact .links-contact {
+    display: inline-flex;
+    margin-right: 4rem;
+  }
+  #contact .title {
+    font-size: 2.5rem;
+  }
+  #contact .subtitle {
+    font-size: 1.5rem;
+  }
+
+  /* FOOTER */
+  footer .container {
+    position: relative;
+  }
+
+  footer .icons-socials {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    display: inline-flex;
   }
 }
 
