@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: start;
+            font-family: 'Poppins', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1,
+        h2,
+        h3{
+            color: #444;
+            font-weight: 400;
+            
+        }
+        h1{
+            margin-bottom: 10px;
+        }
+        p{
+            color:gray;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        strong{
+            color: #0070ff;
+            font-weight: 500;
+        }
+        a{
+            color: #0070ff;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        ul{
+            color: gray;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        li{
+            margin-bottom: 8px;
+        }
+        .section{
+            margin-bottom: 30px;
+        }
+        .faq-details{
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .faq-question{
+            color: #444;
+            font-weight: 500;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .faq-answer{
+            color: gray;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .highlight-box{
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #0070ff;
+            margin: 20px 0;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td{
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            color: gray;
+            font-weight: 300;
+        }
+        th{
+            color: #444;
+            font-weight: 500;
+        }
+        .contact-info{
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .contact-info a{
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .footer-note{
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+        }
+    </style>
+    <title>Suporte - WeatherApp</title>
+</head>
+<body>
+
+    <h1>🌦️ WeatherApp - Central de Ajuda</h1>
+
+    <div class="section">
+        <h2>📱 Sobre o App</h2>
+        <p><strong>WeatherApp</strong> é seu assistente pessoal de clima e eventos. O aplicativo previsa o tempo para os próximos 8 dias e se integra ao seu calendário para enviar alertas personalizados sobre as condições climáticas dos seus eventos.</p>
+    </div>
+
+    <div class="section">
+        <h3>Recursos Principais</h3>
+        <ul>
+            <li>✅ Previsão de 8 dias com carrossel interativo</li>
+            <li>✅ Alertas automáticos do seu calendário</li>
+            <li>✅ Interface moderna com ícones dinâmicos</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>❓ Perguntas Frequentes</h2>
+
+        <div class="faq-details">
+            <div class="faq-question">🔍 Como funciona a previsão do tempo?</div>
+            <div class="faq-answer">O WeatherApp usa dados da API Open-Meteo, uma das mais precisas fontes de dados meteorológicos do mundo, para fornecer previsões confiáveis baseadas na sua localização atual.</div>
+        </div>
+
+        <div class="faq-details">
+            <div class="faq-question">📍 Por que preciso compartilhar minha localização?</div>
+            <div class="faq-answer">Sua localização é necessária para buscar a previsão do tempo específica da região onde você está. Sem ela, não podemos fornecer dados meteorológicos precisos.</div>
+        </div>
+
+        <div class="faq-details">
+            <div class="faq-question">📅 Como funciona a integração com o calendário?</div>
+            <div class="faq-answer">1. O app solicita permissão para acessar seu calendário<br>2. Ele lê os eventos dos próximos 7 dias<br>3. Para cada evento, verifica a previsão do tempo<br>4. Envia uma notificação pela manhãavisando sobre as condições climáticas</div>
+        </div>
+
+        <div class="faq-details">
+            <div class="faq-question">🔔 Por que não estou recebendo notificações?</div>
+            <div class="faq-answer">Verifique se:<br>- As notificações estão habilitadas nas Configurações do iOS<br>- O app tem permissão de Notificação<br>- O app tem permissão de Acesso ao Calendário<br>- Você tem eventos no calendário para os próximos dias</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔧 Solução de Problemas</h2>
+
+        <div class="faq-details">
+            <div class="faq-question">"Localização não disponível"</div>
+            <div class="faq-answer">1. Vá em <strong>Configurações → WeatherApp → Localização</strong><br>2. Selecione <strong>"Sempre"</strong> ou <strong>"Durante uso"</strong><br>3. Certifique-se de que a localização está ativada</div>
+        </div>
+
+        <div class="faq-details">
+            <div class="faq-question">"Não consigo ver meus eventos"</div>
+            <div class="faq-answer">1. Vá em <strong>Configurações → WeatherApp → Calendários</strong><br>2. Verifique se o app tem acesso ao seu calendário<br>3. Ative os calendários que deseja compartilhar</div>
+        </div>
+
+        <div class="faq-details">
+            <div class="faq-question">"As notificações não aparecem"</div>
+            <div class="faq-answer">1. Vá em <strong>Configurações → WeatherApp → Notificações</strong><br>2. Ative <strong>"Permitir notificações"</strong><br>3. Configure para mostrar como "Notificações"</div>
+        </div>
+
+        <div class="faq-details">
+            <div class="faq-question">"O app está lento"</div>
+            <div class="faq-answer">1. Feche e abra o app novamente<br>2. Verifique sua conexão com a internet<br>3. Atualize para a versão mais recente do app</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔐 Privacidade</h2>
+        
+        <h3>Que dados coletamos?</h3>
+        <ul>
+            <li><strong>Localização</strong>: Usada apenas para fornecer previsão do tempo local</li>
+            <li><strong>Calendário</strong>: Usada apenas para enviar alertas de eventos</li>
+        </ul>
+
+        <h3>Seus dados são seguros?</h3>
+        <ul>
+            <li>✅ Nunca compartilhamos seus dados com terceiros</li>
+            <li>✅ Não armazenamos histórico de localização</li>
+            <li>✅ Não usamos para fins publicitários</li>
+        </ul>
+
+        <p>Para mais detalhes, consulte nossa <a href="https://informeai.com.br/policy" target="_blank">Política de Privacidade</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>📞 Fale Conosco</h2>
+        
+        <div class="contact-info">
+            <p>Ainda precisa de ajuda?</p>
+            <p><strong>Email:</strong> <a href="mailto:suporte@informeai.com.br">suporte@informeai.com.br</a></p>
+            <p><strong>Website:</strong> <a href="https://www.informeai.com.br" target="_blank">www.informeai.com.br</a></p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <p>Este documento é atualizado periodicamente. Última revisão: <strong>Abril</strong>/<strong>2026</strong></p>
+    </div>
+
+</body>
+</html>
